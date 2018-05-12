@@ -12,6 +12,7 @@ class _DownloadPageState extends State<DownloadPage> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
+        backgroundColor: Colors.orange,
         title: new Text('HomeScreen'),
       ),
       body: new Center(
