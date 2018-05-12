@@ -1,14 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
-import '../pages/home.dart';
-
-class SplashScreen extends StatelessWidget{
-  @override
-    Widget build(BuildContext context) {
-      // TODO: implement build
-      return new SplashPage();
-    }
-}
+import 'home_page.dart';
 
 class SplashPage extends StatefulWidget {
   @override
@@ -37,8 +29,7 @@ class _SplashPageState extends State<SplashPage> {
   }
 
   void navigationPage() {
-    // Navigator.of(context).pushReplacementNamed('/HomeScreen');
-    Navigator.of(context).push(new MaterialPageRoute(builder: (BuildContext context) => new HomeApp()));
+    Navigator.of(context).push(new MaterialPageRoute(builder: (BuildContext context) => new HomePage()));
   }
 
   @override

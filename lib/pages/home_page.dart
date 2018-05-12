@@ -1,15 +1,7 @@
 import 'package:flutter/material.dart';
-
-class HomeApp extends StatelessWidget {
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return new MaterialApp(
-      title: 'Animax',
-      home: new HomePage(),
-    );
-  }
-}
+import 'fragments/search_page.dart';
+import 'fragments/start_page.dart';
+import 'fragments/download_page.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -27,9 +19,9 @@ class _MainPageState extends State<HomePage> {
     return new Scaffold(
         body: new PageView(
           children: [
-            new Container(color: Colors.red),
-            new Container(color: Colors.blue),
-            new Container(color: Colors.grey)
+            new StartPage(),
+            new SearchPage(),
+            new DownloadPage(),
           ],
           controller: _pageController,
           onPageChanged: onPageChanged,
@@ -57,8 +49,6 @@ class _MainPageState extends State<HomePage> {
 
   void navigationTapped(int page){
 
-    // Animating to the page.
-    // You can use whatever duration and curve you like
     _pageController.animateToPage(
         page,
         duration: const Duration(milliseconds: 300),
