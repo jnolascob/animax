@@ -25,14 +25,14 @@ class _SplashPageState extends State<SplashPage> {
         title: new Text('HomeScreen'),
       ),
       body: new Center(
-        // child: new Image.asset('images/logo.jpg', package: 'assets'),
-        child: new Text('Welcome to Home.!'),
+        child: new Image.asset('assets/images/img_logo.png',),
+        // child: new Text('Welcome to Home.!'),
       ),
     );
   }
 
   startTime() async {
-    var _duration = new Duration(seconds: 2);
+    var _duration = new Duration(seconds: 5);
     return new Timer(_duration, navigationPage);
   }
 
